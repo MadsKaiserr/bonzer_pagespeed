@@ -7,23 +7,32 @@
         {
           "id": "bootup-time",
           "issue": "High JavaScript execution time",
+          "trigger": 0.9,
           "consequence": "High JavaScript execution time can significantly delay the loading and interactivity of your website. When JavaScript takes too long to run, it may lead to a poor user experience, causing visitors to leave before the page fully loads. For this reason, JavaScript should be optimized, and unnecessary scripts reduced.",
-          "trigger": 0.9
         },
         {
-          "id": "js2",
+          "id": "MANGLER",
           "issue": "Unused Javascript and high main-thread work",
+          "trigger": 0.9,
           "consequence": "Both unused JavaScript and high main-thread activity negatively impact performance. Downloading and parsing unused code wastes bandwidth and initial processing time, while heavy main-thread work (often from excessive script execution) blocks the browser, making the page unresponsive to user input. This directly harms interactivity metrics like Interaction to Next Paint (INP), leads to a poor user experience, and negatively affects Core Web Vitals scores, potentially impacting search rankings."
         },
         {
-          "id": "js3",
+          "id": "mainthread-work-breakdown",
           "issue": "Excessive Main-Thread Work",
+          "trigger": 0.9,
           "consequence": "Heavy main-thread activity can delay user interactions, making the page feel unresponsive. This impacts user experience and can increase bounce rates. Optimizing main-thread work improves interactivity, user satisfaction, and search engine rankings, as responsiveness is a key factor in page performance metrics."
         },
         {
-          "id": "js4",
-          "issue": "Unused and unoptimized JS and CSS",
-          "consequence": "Unused and unoptimized JavaScript and CSS files can slow down page load times, increasing the page's overall size and reducing performance. This negatively impacts user experience and SEO rankings, as search engines prioritize fast-loading, efficient websites. Reducing unnecessary code can improve load times, boost performance scores, and contribute to better overall user engagement."
+          "id": "unused-css-rules",
+          "issue": "Unused and unoptimized CSS",
+          "trigger": 0.9,
+          "consequence": "Unused and unoptimized CSS files can slow down page load times, increasing the page's overall size and reducing performance. This negatively impacts user experience and SEO rankings, as search engines prioritize fast-loading, efficient websites. Reducing unnecessary code can improve load times, boost performance scores, and contribute to better overall user engagement."
+        },
+        {
+          "id": "unused-javascript",
+          "issue": "Unused and unoptimized JS",
+          "trigger": 0.9,
+          "consequence": "Unused and unoptimized JavaScript files can slow down page load times, increasing the page's overall size and reducing performance. This negatively impacts user experience and SEO rankings, as search engines prioritize fast-loading, efficient websites. Reducing unnecessary code can improve load times, boost performance scores, and contribute to better overall user engagement."
         }
       ]
     },
@@ -32,9 +41,10 @@
       "slug": "core-web-vitals",
       "issues": [
         {
-          "id": "lcp1",
-          "issue": "Long Largest Contentful Paint (LCP), LCP was lazily loaded",
-          "consequence": "A long Largest Contentful Paint (LCP) time, especially when LCP elements are lazily loaded, negatively impacts user experience, as visitors may perceive the page as slow to load. This can lead to higher bounce rates and lower engagement. Since LCP is a critical ranking factor for Google, a high LCP can also harm search rankings and SEO performance. Optimizing LCP helps improve both user satisfaction and SEO."
+          "id": "largest-contentful-paint",
+          "issue": "Long Largest Contentful Paint (LCP)",
+          "trigger": 0.9,
+          "consequence": "A long Largest Contentful Paint (LCP) time, negatively impacts user experience, as visitors may perceive the page as slow to load. This can lead to higher bounce rates and lower engagement. Since LCP is a critical ranking factor for Google, a high LCP can also harm search rankings and SEO performance. Optimizing LCP helps improve both user satisfaction and SEO."
         }
       ]
     },
@@ -43,8 +53,9 @@
       "slug": "images",
       "issues": [
         {
-          "id": "img1",
+          "id": "im1",
           "issue": "Images are often large (>100kb) and displayed in outdated formats such as jpg, jpeg, and png.",
+          "trigger": 0.9,
           "consequence": "Large images in outdated formats slow down the page, leading to higher bounce rates and lower engagement. While a single large image may not significantly impact performance, having multiple images that exceed size guidelines can create a snowball effect, further hindering page speed and user experience."
         },
         {
@@ -55,11 +66,13 @@
         {
           "id": "img3",
           "issue": "Banner image does not have fetchpriority",
+          "trigger": 0.9,
           "consequence": "On the website, banner images do not have any fetchpriority, making a missed opportunity for better core web vitals (LCP score). Since these metrics are crucial for search engine rankings, this can lead to lower visibility in search results."
         },
         {
           "id": "img4",
           "issue": "Improperly sized images",
+          "trigger": 0.9,
           "consequence": "Oversized images slow down page loading times, especially on cellular connections. Slow load times can cause higher bounce rates and a negative user experience, which results in lower rankings."
         }
       ]
@@ -69,13 +82,15 @@
       "slug": "dom-render",
       "issues": [
         {
-          "id": "dom1",
+          "id": "dom-size-insight",
           "issue": "Excessive DOM size",
+          "trigger": 0.9,
           "consequence": "This error indicates that a webpage contains too many HTML elements (often over 1,500 nodes or deep nesting). This can negatively impact performance because browsers take longer to process and render large DOM trees. It can also lead to slower JavaScript execution, memory usage issues, and degraded user experience. Optimizing your DOM structure by removing unnecessary elements, flattening nested elements, and improving code cleanliness can enhance loading times and responsiveness."
         },
         {
-          "id": "dom2",
+          "id": "render-blocking-insight",
           "issue": "Render-blocking Resources",
+          "trigger": 0.9,
           "consequence": "Render-blocking resources delay the rendering of page content. When these resources prevent the browser from displaying the page immediately, it can lead to longer loading times and a poor user experience. This can also negatively affect SEO, as search engines may perceive slow-loading pages as lower quality."
         }
       ]
@@ -85,14 +100,10 @@
       "slug": "caching",
       "issues": [
         {
-          "id": "cache1",
+          "id": "cache-insight",
           "issue": "Inefficient/Short Cache Policy for Static Assets",
+          "trigger": 0.9,
           "consequence": "Serving static assets like images (.webp, .png, .jpg) with short cache lifetime forces browsers to re-download these potentially large files often, even for returning users. This significantly increases page load times, consumes unnecessary bandwidth, and harms the user experience, especially on repeat visits. From an SEO perspective, this negatively impacts key performance metrics (including LCP) which are ranking factors, and signals inefficient resource management to search engines."
-        },
-        {
-          "id": "cache2",
-          "issue": "Inefficient/Short Cache Policy for Static Assets",
-          "consequence": "Serving static assets like images (.webp, .png, .jpg) with no cache lifetime forces browsers to re-download these potentially large files on every visit, even for returning users. This significantly increases page load times, consumes unnecessary bandwidth, and harms the user experience, especially on repeat visits. From an SEO perspective, this negatively impacts key performance metrics (including LCP) which are ranking factors, and signals inefficient resource management to search engines."
         }
       ]
     }
