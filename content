@@ -5,9 +5,10 @@
       "slug": "javascript-css",
       "issues": [
         {
-          "id": "js1",
+          "id": "bootup-time",
           "issue": "High JavaScript execution time",
-          "consequence": "High JavaScript execution time can significantly delay the loading and interactivity of your website. When JavaScript takes too long to run, it may lead to a poor user experience, causing visitors to leave before the page fully loads. For this reason, JavaScript should be optimized, and unnecessary scripts reduced."
+          "consequence": "High JavaScript execution time can significantly delay the loading and interactivity of your website. When JavaScript takes too long to run, it may lead to a poor user experience, causing visitors to leave before the page fully loads. For this reason, JavaScript should be optimized, and unnecessary scripts reduced.",
+          "trigger": 0.9
         },
         {
           "id": "js2",
