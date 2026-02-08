@@ -51,13 +51,6 @@
           "issue": "Test issue",
           "trigger": 0.9,
           "consequence": "test konsekvens"
-        },
-        {
-          "id": "cab7e1b2-f95d-4c9e-8db5-bb76fb371a60",
-          "psi_id": "",
-          "issue": "Tester ID igen",
-          "trigger": 0.9,
-          "consequence": "Check"
         }
       ]
     },
