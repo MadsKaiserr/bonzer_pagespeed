@@ -80,7 +80,7 @@
           "consequence": "On the website, banner images does not have a loading eager property, making a missed opportunity for better core web vitals (LCP score). Since these metrics are crucial for search engine rankings, this can lead to lower visibility in search results."
         },
         {
-          "id": "images-4",
+          "id": "images-5",
           "psi_id": "img4",
           "issue": "Improperly sized images",
           "trigger": 0.9,
