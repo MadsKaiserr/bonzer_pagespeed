@@ -58,13 +58,6 @@
           "issue": "Tester ID igen",
           "trigger": 0.9,
           "consequence": "Check"
-        },
-        {
-          "id": "7ed5f9dd-7a12-4676-ab3e-699f1d6f4b35",
-          "psi_id": "",
-          "issue": "Virker det?",
-          "trigger": 0.9,
-          "consequence": "asd"
         }
       ]
     },
