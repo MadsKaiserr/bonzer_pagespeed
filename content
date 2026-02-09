@@ -85,6 +85,13 @@
           "issue": "Images displayed in outdated formats such as jpg, jpeg, and png.",
           "trigger": 0.9,
           "consequence": "Large images in outdated formats slow down the page, leading to higher bounce rates and lower engagement. While a single large image may not significantly impact performance, having multiple images that exceed size guidelines can create a snowball effect, further hindering page speed and user experience."
+        },
+        {
+          "id": "7ecade20-4155-40f3-b1cf-c69ec56a7f59",
+          "psi_id": "lcp-images-toolarge",
+          "issue": "Multiple Images Over 100KB",
+          "trigger": 0.9,
+          "consequence": "Large images can cause longer loading times, negatively impacting page performance and potentially leading to higher bounce rates. This harms the user experience and can negatively affect SEO, as search engines prioritize fast-loading pages. Optimizing images to smaller file sizes can improve both loading times and user engagement."
         }
       ]
     },
