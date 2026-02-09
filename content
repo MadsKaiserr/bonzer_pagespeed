@@ -81,7 +81,7 @@
         },
         {
           "id": "images-5",
-          "psi_id": "img4",
+          "psi_id": "lcp-images-intrinsicsize",
           "issue": "Improperly sized images",
           "trigger": 0.9,
           "consequence": "Oversized images slow down page loading times, especially on cellular connections. Slow load times can cause higher bounce rates and a negative user experience, which results in lower rankings."
