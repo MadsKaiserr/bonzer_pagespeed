@@ -183,6 +183,11 @@
           "id": "383dc545-f7e5-4734-8ab1-505cc0b68441",
           "issue": "The website is available in multiple languages, but not through having separate pages and using hreflang tags, but by using a dynamic translation on the frontend",
           "consequence": "This method prevents the creation of separate, indexable URLs for each language. Search engines crawl and index the original content, as the translation happens dynamically in the user's browser. As a result, the site is unable to rank for non-English keywords and loses the ability to target international audiences effectively. Furthermore, the reliance on automated translation often results in low-quality content, leading to a poor user experience and negative engagement signals like high bounce rates, which can further harm SEO.\n"
+        },
+        {
+          "id": "73dae958-39f1-4766-8088-65fad5b55b30",
+          "issue": "The website has issues with the hreflang annotation, like using incorrect language-region codes",
+          "consequence": "Invalid language-region codes prevent search engines from recognizing which target audience a page belongs to, while missing return links cause Google to invalidate the annotations altogether. As a result, search engines can no longer map your content to specific countries or languages, causing localized search rankings to drop and increasing the risk of duplicate content penalties. International users will frequently land on the wrong language or regional version of your site, leading to higher bounce rates and lost conversions."
         }
       ]
     },
